@@ -19,4 +19,5 @@ mono_crash.*.json
 /android/
 
 # Build
-builds
+builds/
+!builds/custom.py

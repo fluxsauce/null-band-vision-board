@@ -19,9 +19,10 @@ horizontal_alignment = 2
 
 [node name="Body" type="Label" parent="."]
 layout_mode = 2
-text = "- Sound Effects: https://sfxr.me/ \"Blip/select\" random generation
+text = "- Developer: Jon Peck / null.band
+- Music: Jon Peck / null.band
 - Game Engine: Godot
-- Developer: Jon Peck
-- Font: TGL 0-1451 Engschrift by Peter Wiegel "
+- Sound Effects: https://sfxr.me/ \"Blip/select\" random generation
+- Font: TGL 0-1451 Engschrift by Peter Wiegel"
 label_settings = ExtResource("2_xl5s3")
 horizontal_alignment = 2

@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dkk2ithbuegiv"]
+[gd_scene load_steps=17 format=3 uid="uid://dkk2ithbuegiv"]
 
 [ext_resource type="Script" uid="uid://cb80xmik8ajf2" path="res://slideshow.gd" id="1_ym11s"]
 [ext_resource type="PackedScene" uid="uid://co6uohq78d131" path="res://slides/00_title.tscn" id="2_ckhw2"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://csei33hrpew7p" path="res://slides/05_audience.tscn" id="7_k55ea"]
 [ext_resource type="PackedScene" uid="uid://b7uaa25osi03o" path="res://slides/06_differentiators.tscn" id="8_d64yu"]
 [ext_resource type="PackedScene" uid="uid://c7la6shilasl2" path="res://slides/07_community.tscn" id="9_mfpia"]
+[ext_resource type="PackedScene" uid="uid://jiixaha74txe" path="res://slides/08_branding.tscn" id="10_cegik"]
 [ext_resource type="LabelSettings" uid="uid://bdle0nd7c3slv" path="res://label_settings_title.tres" id="11_d64yu"]
 [ext_resource type="AudioStream" uid="uid://dybe423s2amd8" path="res://assets/blipSelectForward.wav" id="12_mfpia"]
 [ext_resource type="AudioStream" uid="uid://bairac7sts854" path="res://assets/blipSelectBack.wav" id="13_tk5mn"]
@@ -22,7 +23,7 @@ bg_color = Color(0, 0, 0, 1)
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_ym11s")
-slide_scenes = Array[PackedScene]([ExtResource("2_ckhw2"), ExtResource("3_a1ek4"), ExtResource("4_oc8sf"), ExtResource("5_gnnch"), ExtResource("6_5o08k"), ExtResource("7_k55ea"), ExtResource("8_d64yu"), ExtResource("9_mfpia"), ExtResource("3_c0x0y")])
+slide_scenes = Array[PackedScene]([ExtResource("2_ckhw2"), ExtResource("3_a1ek4"), ExtResource("4_oc8sf"), ExtResource("5_gnnch"), ExtResource("6_5o08k"), ExtResource("7_k55ea"), ExtResource("8_d64yu"), ExtResource("9_mfpia"), ExtResource("10_cegik"), ExtResource("3_c0x0y")])
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -44,7 +45,7 @@ theme_override_constants/margin_bottom = 40
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer2"]
-offset_left = 1455.0
+offset_left = 1438.0
 offset_top = 903.0
 offset_right = 1880.0
 offset_bottom = 1052.0
@@ -53,10 +54,10 @@ color = Color(0.20871013, 0.20871016, 0.20871013, 1)
 [node name="LabelPageCounter" type="Label" parent="CanvasLayer2/ColorRect"]
 use_parent_material = true
 layout_mode = 0
-offset_left = 35.0
-offset_top = -22.0
-offset_right = 360.0
-offset_bottom = 167.0
+offset_left = 3.0
+offset_top = -35.0
+offset_right = 434.0
+offset_bottom = 182.0
 text = "X of Y"
 label_settings = ExtResource("11_d64yu")
 horizontal_alignment = 2

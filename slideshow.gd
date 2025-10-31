@@ -8,6 +8,11 @@ func _ready():
 	if not slide_scenes.is_empty():
 		load_slide(0)
 
+func zero_pad(number: int) -> String:
+	if number >= 10:
+		return str(number)
+	return "0" + str(number)
+
 func load_slide(index: int):
 	# Only one scene at a time
 	if current_slide_instance:
@@ -19,7 +24,7 @@ func load_slide(index: int):
 	$CanvasLayer/PanelContainer/MarginContainer.add_child(current_slide_instance)
 	
 	# Update the label
-	$CanvasLayer2/ColorRect/LabelPageCounter.text = str(current_slide_index + 1) + " of " + str(slide_scenes.size())
+	$CanvasLayer2/ColorRect/LabelPageCounter.text = zero_pad(current_slide_index + 1) + " of " + zero_pad(slide_scenes.size())
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("forward"):
@@ -28,7 +33,6 @@ func _input(event: InputEvent) -> void:
 		load_slide_back()
 	elif event.is_action_pressed("exit"):
 		get_tree().quit()
-
 
 func load_slide_back() -> void:
 	load_slide(current_slide_index - 1)

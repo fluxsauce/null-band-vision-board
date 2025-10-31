@@ -9,15 +9,13 @@ offset_bottom = 461.0
 
 [node name="Title" type="Label" parent="."]
 layout_mode = 2
-text = "[business name]"
+text = "[business name: null.band]"
 label_settings = ExtResource("1_41o3e")
 
 [node name="Body" type="Label" parent="."]
 layout_mode = 2
-text = "- \"null.band\"
-- Why?
-  - Null Confluence was already taken
-  - I already own the domain null.band and made some assets for it
-  - I'm not actively working on electronic music under that name
-  - I can pivot the existing material as a subset of the overall studio"
+text = "- Null Confluence was already taken
+- I already own the domain null.band and made some assets for it
+- I'm not actively working on electronic music under that name
+- I can pivot the existing material as a subset of the overall studio"
 label_settings = ExtResource("2_1sfjb")
