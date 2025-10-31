@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7la6shilasl2"]
+
+[ext_resource type="LabelSettings" uid="uid://bdle0nd7c3slv" path="res://label_settings_title.tres" id="1_7q1nb"]
+[ext_resource type="LabelSettings" uid="uid://bqek2oi020po0" path="res://label_settings_body.tres" id="2_so0g3"]
+
+[node name="VBoxContainer" type="VBoxContainer"]
+offset_right = 1920.0
+offset_bottom = 1170.0
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 2
+text = "[community]"
+label_settings = ExtResource("1_7q1nb")
+
+[node name="Body" type="Label" parent="."]
+layout_mode = 2
+text = "- Respectfully foster and grow community first through Bluesky and Itch, then curate my own space on Discord.
+- Engage and ask for feedback, validate and appreciate their input, but stay true to my creative vision."
+label_settings = ExtResource("2_so0g3")
+autowrap_mode = 3

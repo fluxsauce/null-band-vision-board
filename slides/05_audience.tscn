@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://csei33hrpew7p"]
+
+[ext_resource type="LabelSettings" uid="uid://bdle0nd7c3slv" path="res://label_settings_title.tres" id="1_b81pe"]
+[ext_resource type="LabelSettings" uid="uid://bqek2oi020po0" path="res://label_settings_body.tres" id="2_2itsg"]
+
+[node name="VBoxContainer" type="VBoxContainer"]
+offset_right = 1920.0
+offset_bottom = 1170.0
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 2
+text = "[audience]"
+label_settings = ExtResource("1_b81pe")
+
+[node name="Body" type="Label" parent="."]
+layout_mode = 2
+text = "Adventure, puzzle, and strategy players who appreciate approachable, accessible games that can be played at any pace to reveal evolving stories and mechanics."
+label_settings = ExtResource("2_2itsg")
+autowrap_mode = 3

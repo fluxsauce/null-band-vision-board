@@ -1,0 +1,7 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://bdle0nd7c3slv"]
+
+[ext_resource type="FontFile" uid="uid://sh82a2lj20g6" path="res://assets/TGL_0-1451Eng.ttf" id="1_o4oit"]
+
+[resource]
+font = ExtResource("1_o4oit")
+font_size = 165

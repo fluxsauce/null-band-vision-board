@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://b7uaa25osi03o"]
+
+[ext_resource type="LabelSettings" uid="uid://bdle0nd7c3slv" path="res://label_settings_title.tres" id="1_tqt02"]
+[ext_resource type="LabelSettings" uid="uid://bqek2oi020po0" path="res://label_settings_body.tres" id="2_hyyaj"]
+
+[node name="VBoxContainer" type="VBoxContainer"]
+offset_right = 1920.0
+offset_bottom = 1170.0
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 2
+text = "[differentiators]"
+label_settings = ExtResource("1_tqt02")
+
+[node name="Body" type="Label" parent="."]
+layout_mode = 2
+text = "- My decades of experience creating, managing, and delivering software at scale, along with being an active musician and composer.
+- I implement user experiences that are informed by both positive and negative feedback from competitive analysis, helping iterate on what works and avoid what doesn't."
+label_settings = ExtResource("2_hyyaj")
+autowrap_mode = 3

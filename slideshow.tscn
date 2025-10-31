@@ -1,0 +1,99 @@
+[gd_scene load_steps=16 format=3 uid="uid://dkk2ithbuegiv"]
+
+[ext_resource type="Script" uid="uid://cb80xmik8ajf2" path="res://slideshow.gd" id="1_ym11s"]
+[ext_resource type="PackedScene" uid="uid://co6uohq78d131" path="res://slides/00_title.tscn" id="2_ckhw2"]
+[ext_resource type="PackedScene" uid="uid://b3j80ekobanja" path="res://slides/01_business_name.tscn" id="3_a1ek4"]
+[ext_resource type="PackedScene" uid="uid://dy66o80gjerba" path="res://slides/99_credits.tscn" id="3_c0x0y"]
+[ext_resource type="PackedScene" uid="uid://b7iapon7y4hpm" path="res://slides/02_mission.tscn" id="4_oc8sf"]
+[ext_resource type="PackedScene" uid="uid://ci3273cmpf03v" path="res://slides/03_vision.tscn" id="5_gnnch"]
+[ext_resource type="PackedScene" uid="uid://bfk43fy82ex8g" path="res://slides/04_values.tscn" id="6_5o08k"]
+[ext_resource type="PackedScene" uid="uid://csei33hrpew7p" path="res://slides/05_audience.tscn" id="7_k55ea"]
+[ext_resource type="PackedScene" uid="uid://b7uaa25osi03o" path="res://slides/06_differentiators.tscn" id="8_d64yu"]
+[ext_resource type="PackedScene" uid="uid://c7la6shilasl2" path="res://slides/07_community.tscn" id="9_mfpia"]
+[ext_resource type="LabelSettings" uid="uid://bdle0nd7c3slv" path="res://label_settings_title.tres" id="11_d64yu"]
+[ext_resource type="AudioStream" uid="uid://dybe423s2amd8" path="res://assets/blipSelectForward.wav" id="12_mfpia"]
+[ext_resource type="AudioStream" uid="uid://bairac7sts854" path="res://assets/blipSelectBack.wav" id="13_tk5mn"]
+[ext_resource type="AudioStream" uid="uid://crj5m6c6bmc8i" path="res://assets/engulfed.ogg" id="14_r1jod"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r1jod"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="ControlSlideshow" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_ym11s")
+slide_scenes = Array[PackedScene]([ExtResource("2_ckhw2"), ExtResource("3_a1ek4"), ExtResource("4_oc8sf"), ExtResource("5_gnnch"), ExtResource("6_5o08k"), ExtResource("7_k55ea"), ExtResource("8_d64yu"), ExtResource("9_mfpia"), ExtResource("3_c0x0y")])
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_r1jod")
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer2"]
+offset_left = 1455.0
+offset_top = 903.0
+offset_right = 1880.0
+offset_bottom = 1052.0
+color = Color(0.20871013, 0.20871016, 0.20871013, 1)
+
+[node name="LabelPageCounter" type="Label" parent="CanvasLayer2/ColorRect"]
+use_parent_material = true
+layout_mode = 0
+offset_left = 35.0
+offset_top = -22.0
+offset_right = 360.0
+offset_bottom = 167.0
+text = "X of Y"
+label_settings = ExtResource("11_d64yu")
+horizontal_alignment = 2
+
+[node name="ButtonBack" type="Button" parent="CanvasLayer2"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 49.0
+offset_top = -180.0
+offset_right = 141.0
+offset_bottom = -35.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 100
+text = "←"
+
+[node name="ButtonForward" type="Button" parent="CanvasLayer2"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 162.0
+offset_top = -180.0
+offset_right = 280.0
+offset_bottom = -35.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 100
+text = "→"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_r1jod")
+autoplay = true
+
+[node name="AudioForward" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_mfpia")
+
+[node name="AudioBackward" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_tk5mn")
+
+[connection signal="pressed" from="CanvasLayer2/ButtonBack" to="." method="_on_button_back_pressed"]
+[connection signal="pressed" from="CanvasLayer2/ButtonForward" to="." method="_on_button_forward_pressed"]

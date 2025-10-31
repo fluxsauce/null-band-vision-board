@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://co6uohq78d131"]
+
+[ext_resource type="Script" uid="uid://c3hiwvx3m2xdj" path="res://slides/00_title.gd" id="1_3sa6e"]
+[ext_resource type="Texture2D" uid="uid://diccruflk0v0n" path="res://assets/2022-10-21-null.band-logo.png" id="2_vjr2k"]
+
+[node name="Slide" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3sa6e")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Logo" type="Sprite2D" parent="CanvasLayer"]
+show_behind_parent = true
+texture = ExtResource("2_vjr2k")

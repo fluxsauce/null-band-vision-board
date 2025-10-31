@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://bfk43fy82ex8g"]
+
+[ext_resource type="LabelSettings" uid="uid://bdle0nd7c3slv" path="res://label_settings_title.tres" id="1_fwngr"]
+[ext_resource type="LabelSettings" uid="uid://bqek2oi020po0" path="res://label_settings_body.tres" id="2_naq11"]
+
+[node name="VBoxContainer" type="VBoxContainer"]
+offset_right = 1920.0
+offset_bottom = 1170.0
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 2
+text = "[values]"
+label_settings = ExtResource("1_fwngr")
+
+[node name="Body" type="Label" parent="."]
+layout_mode = 2
+text = "- Ethically produced creator-owned content: obtain and respect licenses, avoid AI creations, and fairly compensate and credit human contributors.
+- Foster positive community engagement to build an audience. Prioritize craft over volume.
+- Deliver a practical, polished product, not perfection.
+- Make consistent, measurable progress without crunching."
+label_settings = ExtResource("2_naq11")
+autowrap_mode = 3

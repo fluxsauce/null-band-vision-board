@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://b7iapon7y4hpm"]
+
+[ext_resource type="LabelSettings" uid="uid://bdle0nd7c3slv" path="res://label_settings_title.tres" id="1_a76uc"]
+[ext_resource type="LabelSettings" uid="uid://bqek2oi020po0" path="res://label_settings_body.tres" id="2_h08em"]
+
+[node name="VBoxContainer" type="VBoxContainer"]
+offset_right = 1533.0
+offset_bottom = 216.0
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 2
+text = "[mission]"
+label_settings = ExtResource("1_a76uc")
+
+[node name="Body" type="Label" parent="."]
+layout_mode = 2
+text = "Deliver creative, engaging, and well-polished entertaining experiences that tell stories through emergent play."
+label_settings = ExtResource("2_h08em")
